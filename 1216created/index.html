@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScrollTriggerAnimation</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <section>
+    <img src="assets/bg-2.jpg" id="bg">
+    <img src="assets/moon.png" id="moon">
+    <img src="assets/cloud1.png" id="cl1">
+    <img src="assets/cloud2.png" id="cl2">
+    <img src="assets/santa.png" id="santa">
+    <div id="tree"></div>
+    <div id="text">Happy Xmas</div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.to("#moon",{
+      scrollTrigger: {
+        scrub:1
+      },
+      scale:1.5,
+    })
+    gsap.to("#bg",{
+      scrollTrigger: {
+        scrub:1
+      },
+      scale:2,
+    })
+    gsap.to("#santa",{
+      scrollTrigger: {
+        scrub:1
+      },
+      scale:1.5,
+      y:-500,
+      x:2000,
+    })
+    gsap.to("#tree",{
+      scrollTrigger: {
+        scrub:1
+      },
+      x:-500,
+    })
+    gsap.to("#cl1",{
+      scrollTrigger: {
+        scrub:1
+      },
+      x:-200,
+    })
+    gsap.to("#cl2",{
+      scrollTrigger: {
+        scrub:1
+      },
+      x:200,
+    })
+    gsap.to("#text",{
+      scrollTrigger: {
+        scrub:1
+      },
+      y:-800,
+    })
+  </script>
+
+</body>
+</html>
